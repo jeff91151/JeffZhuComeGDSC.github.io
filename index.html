@@ -35,14 +35,14 @@
 <body>
     <div class="container">
         <h1>今天想吃什麼哩!</h1>
-        <button class="button" id="drawButton">抽</button>
+        <button class="button" id="drawButton">點這</button>
         <div class="result" id="result"></div>
     </div>
 
     <script>
         // 抽籤功能
         document.getElementById('drawButton').addEventListener('click', function() {
-            const items = ['泰勒', '品都', '海底撈', '名香園', '大便']; // 替換成您自己的選項
+            const items = ['第一美食', '棋哥火雞肉飯', '頤園', '皮蛋麵', '蕉ㄚ', '泰鍋古藝', '十二鍋', '六扇門', '秋香鵝肉飯', '吃寶貝(Ibubu or Lowkingking)', '老虎麵', '俠客蛋餅', '番茄蛋麵', '古都', '湘和手打麵', '韓一']; // 替換成您自己的選項
             const randomIndex = Math.floor(Math.random() * items.length);
             const resultElement = document.getElementById('result');
             resultElement.textContent = '抽到的選項是：' + items[randomIndex];
