@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽籤神器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 36px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 48px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>今天想吃什麼哩!</h1>
+        <button class="button" id="drawButton">抽</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // 抽籤功能
+        document.getElementById('drawButton').addEventListener('click', function() {
+            const items = ['泰勒', '品都', '海底撈', '名香園', '大便']; // 替換成您自己的選項
+            const randomIndex = Math.floor(Math.random() * items.length);
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = '抽到的選項是：' + items[randomIndex];
+            resultElement.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
